@@ -1,0 +1,13 @@
+INFO	2016-12-15 15:58:22,974	0	core.MyLogger	[main]	Checking for available devices
+INFO	2016-12-15 15:58:22,990	16	core.MyLogger	[main]	Formating ADB command: adb devices
+INFO	2016-12-15 15:58:23,001	27	core.MyLogger	[main]	Formated ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb devices
+INFO	2016-12-15 15:58:23,161	187	core.MyLogger	[main]	Output of ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb devices
+INFO	2016-12-15 15:58:23,162	188	core.MyLogger	[main]	Formating ADB command: adb -s 03de9dc6213ebc2d shell pm list packages
+INFO	2016-12-15 15:58:23,162	188	core.MyLogger	[main]	Formated ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb -s 03de9dc6213ebc2d shell pm list packages
+INFO	2016-12-15 15:58:24,273	1299	core.MyLogger	[main]	Output of ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb -s 03de9dc6213ebc2d shell pm list packages
+INFO	2016-12-15 15:58:24,278	1304	core.MyLogger	[main]	Trying to create a new Driver for device: 03de9dc6213ebc2d
+INFO	2016-12-15 15:58:24,908	1934	core.MyLogger	[main]	Creating desirecapabalities for device: 03de9dc6213ebc2d
+INFO	2016-12-15 15:58:41,176	18202	core.MyLogger	[main]	Formating ADB command: adb -s03de9dc6213ebc2d shell am start -c api.android.intent.category.LAUNCHER -a api.android.intent.action.MAIN -n com.mobile.simplilearn/com.mobile.simplilearn.view.activity.SplashActivity
+INFO	2016-12-15 15:58:41,176	18202	core.MyLogger	[main]	Formated ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb -s03de9dc6213ebc2d shell am start -c api.android.intent.category.LAUNCHER -a api.android.intent.action.MAIN -n com.mobile.simplilearn/com.mobile.simplilearn.view.activity.SplashActivity
+INFO	2016-12-15 15:58:42,519	19545	core.MyLogger	[main]	Output of ADB command: /Users/jagannathpanda/Library/Android/sdk/platform-tools/adb -s03de9dc6213ebc2d shell am start -c api.android.intent.category.LAUNCHER -a api.android.intent.action.MAIN -n com.mobile.simplilearn/com.mobile.simplilearn.view.activity.SplashActivity
+INFO	2016-12-15 15:58:42,520	19546	core.MyLogger	[main]	Waiting for Home activity
