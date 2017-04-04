@@ -2,6 +2,7 @@ package test;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
 import java.net.MalformedURLException;
 
 
@@ -10,6 +11,9 @@ import java.net.MalformedURLException;
 
 
 
+
+
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -20,6 +24,7 @@ import com.api.apps.simplilearn.Simplilearn;
 import com.api.apps.simplilearn.menu.Home;
 import com.api.apps.simplilearn.menu.MyAccount;
 import com.api.apps.simplilearn.menu.MyCourseMenu;
+import com.foundation.coreManager.DriverManager;
 import com.foundation.coreManager.TestManager;
 
 public class TestNavigation extends TestManager{
@@ -76,6 +81,12 @@ public class TestNavigation extends TestManager{
 		courseMenu.tapMyAccount();
 		myAccount.tapSignOut();
 		myAccount.tapSignOutOk();
+		
+	}
+	
+	@AfterClass
+	public void afterClass(){
+		DriverManager.killDriver();
 		
 	}
 
