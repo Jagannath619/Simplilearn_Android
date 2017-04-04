@@ -54,5 +54,5 @@ public class Home implements Activity {
 			throw new AssertionError("MyCourseMenu activity fails to load/open");
 		 }
 		}
-
+//Testing Home
 }
