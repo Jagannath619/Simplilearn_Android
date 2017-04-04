@@ -63,7 +63,7 @@ public class DriverManager {
 		for(Object connectedDevice: connectedDevices){
 			String device=  connectedDevice.toString();
 			ArrayList app= new ADB(device).getInstalledPackages();
-			if(app.contains(unlockPackage)) availableDevices.add(device);
+			if(!app.contains(unlockPackage)) availableDevices.add(device);
 			else MyLogger.log.info("Device"+device+"has "+unlockPackage+" installed,assuming it is under testing");
 		}
 		if(availableDevices.size()==0) throw new RuntimeException("Not a single device is available for testing");
