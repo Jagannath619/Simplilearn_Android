@@ -1,5 +1,6 @@
 package com.test.appiumframework;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.apache.log4j.Level;
@@ -23,7 +24,7 @@ public class Runner2Test {
 	
 		@Test
 		@Category(SampleTest.class)
-	public void run() throws InterruptedException{
+	public void run() throws InterruptedException, IOException{
 			MyLogger.log.setLevel(Level.INFO);
 		try{
 		//DriverManager.createDriver();

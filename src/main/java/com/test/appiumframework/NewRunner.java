@@ -2,6 +2,7 @@ package com.test.appiumframework;
 
 import io.appium.java_client.android.AndroidDriver;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.apache.log4j.Level;
@@ -13,7 +14,7 @@ import com.foundation.core.UiSelector;
 import com.foundation.coreManager.DriverManager;
 
 public class NewRunner {
-	public static void main(String[] args) throws MalformedURLException, InterruptedException{
+	public static void main(String[] args) throws InterruptedException, IOException{
 
 		//Android.app.simplilearn.home.homeScreenUiObjects.startLogin();
 			MyLogger.log.setLevel(Level.INFO);

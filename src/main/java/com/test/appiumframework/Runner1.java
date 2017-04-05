@@ -1,5 +1,6 @@
 package com.test.appiumframework;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.apache.log4j.Level;
@@ -14,7 +15,7 @@ import com.foundation.coreManager.DriverManager;
 
 public class Runner1 {
 
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		
 		MyLogger.log.setLevel(Level.INFO);
 		
