@@ -1,17 +1,12 @@
 package test;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
-
-
-
-
-
-
-
-
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -48,7 +43,7 @@ public class TestNavigation extends TestManager{
 		testInfo.id("test1").name("Verify that home activity has all elements");
 		//Assert.assertTrue(simplilearn.home.homeScreenUiObjects.startLogin().exist());
 		}
-	@Test
+	@Test(priority=1)
 	public void test2() throws InterruptedException{
 		//testInfo.id("test2").name("Entering credentials for login");
 		Home home = Android.app.simplilearn.home;
@@ -58,38 +53,37 @@ public class TestNavigation extends TestManager{
 		home.typePassword();
 		home.tapLogin();
 		}
-	@Test
+	@Test(priority=2)
 	public void test3() throws InterruptedException{
 		testInfo.id("test3").name("Testing MyCourse menu");
 		MyCourseMenu courseMenu = Android.app.simplilearn.courseMenu;
 		//Assert.assertTrue(simplilearn.courseMenu.myCourseMenuUiObjects.menuIcon().exist());
 		Thread.sleep(5000);
-		courseMenu.tapMenuIcon();
+	//	courseMenu.tapMenuIcon();
 		//Assert.assertTrue(simplilearn.courseMenu.myCourseMenuUiObjects.myCourse().exist());
-		courseMenu.tapMyCourse();
-		Thread.sleep(10000);
-		courseMenu.tapMenuIcon();
-		courseMenu.tapeExploreCourse();
+//		courseMenu.tapMyCourse();
+//		Thread.sleep(10000);
+//		courseMenu.tapMenuIcon();
+//		Thread.sleep(5000);
+//		courseMenu.tapeExploreCourse();
 		}
 	
-	@AfterTest
-	public void after(){
+	@Test(priority=3)
+	public void after() throws InterruptedException{
 		testInfo.suite("Logout");
 		MyCourseMenu courseMenu = Android.app.simplilearn.courseMenu;
 		MyAccount myAccount = new MyAccount();
 		courseMenu.tapMenuIcon();
 		courseMenu.tapMyAccount();
+		Thread.sleep(5000);
 		myAccount.tapSignOut();
 		myAccount.tapSignOutOk();
-		
-	}
-	
-	@AfterClass
-	public void afterClass(){
+		Thread.sleep(5000);
 		DriverManager.killDriver();
 		
 	}
-
+	
+	
 }
 
 
