@@ -3,6 +3,7 @@ package com.foundation.coreManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class DriverManager {
 	//private static String appiumJS="/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/ios-webkit-debug-proxy-launcher.js";
 	//private static String appiumJS="/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
 	private static String appiumJS="/Applications/Appium.app/Contents/Resources/node_modules/appium/build/lib/main.js";
-	private static DriverService service;
+	private static AppiumDriverLocalService service;
 	private static String deviceID;
 	
 	private static HashMap<String ,URL> hosts;
@@ -45,13 +46,14 @@ public class DriverManager {
 		caps.setCapability("platfornName", "Android");
 		caps.setCapability("app",app.getAbsolutePath());
 		caps.setCapability("platfornName", "Android");
+		caps.setCapability("noReset", "true");
 		return caps;
 	}
 	
 	private static URL host(String deviceID) throws MalformedURLException{
 		if(hosts==null) {
 			hosts= new HashMap<String, URL>();
-			hosts.put("03de9dc6213ebc2d", new URL("http://127.0.0.1:4723/wd/hub"));
+			hosts.put(deviceID, new URL("http://127.0.0.1:4723/wd/hub"));
 			
 		}return hosts.get(deviceID);
 	}
@@ -63,28 +65,38 @@ public class DriverManager {
 		for(Object connectedDevice: connectedDevices){
 			String device=  connectedDevice.toString();
 			ArrayList app= new ADB(device).getInstalledPackages();
-			if(!app.contains(unlockPackage)) availableDevices.add(device);
-			else MyLogger.log.info("Device"+device+"has "+unlockPackage+" installed,assuming it is under testing");
+			if(app.contains(unlockPackage)) {
+				MyLogger.log.info("Device"+device+"has "+unlockPackage+" installed,assuming it is under testing");
+				availableDevices.add(device);}
+			else if(!app.contains(unlockPackage)) {
+				availableDevices.add(device);
+				MyLogger.log.info("Device"+device+"does not have "+unlockPackage+" installed,assuming it is removed");
+			}
+			
+			
 		}
 		if(availableDevices.size()==0) throw new RuntimeException("Not a single device is available for testing");
 		return availableDevices;
 	}
 	
 	
-	private static DriverService createService() throws NumberFormatException, MalformedURLException{
-	service = new AppiumServiceBuilder()
+	private static AppiumDriverLocalService createService() throws NumberFormatException, MalformedURLException{
+	 service =   AppiumDriverLocalService.buildService( new AppiumServiceBuilder()
 		          .usingDriverExecutable(new File(nodeJS))
 		          .withAppiumJS(new File(appiumJS))
-		          .withIPAddress(host(deviceID).toString().split(":")[1].replace("//", ""))
-		          .usingPort(Integer.parseInt(host(deviceID).toString().split(":")[2].replace("/wd/hub", "")))
-		          .withArgument(Arg.TIMEOUT,"120")
-		          .withArgument(Arg.LOG_LEVEL,"debug")
-		          //.withArgument(Arg.NO_RESET,"true")
+		          .withIPAddress("127.0.0.1").usingPort(4723).withCapabilities(getCaps(deviceID))
+		         .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+		         .withArgument(GeneralServerFlag.LOG_LEVEL,"info"));
+		         // .withIPAddress(host(deviceID).toString().split(":")[1].replace("//", ""))
+		         // .usingPort(Integer.parseInt(host(deviceID).toString().split(":")[2].replace("/wd/hub", "")))
+		        //  .withArgument(Arg.TIMEOUT,"120")
+		        //  .withArgument(Arg.LOG_LEVEL,"debug")
+		        //  .withArgument(Arg.NO_RESET,"true"));
 		          //.withArgument(Arg.PLATFORM_NAME,"Android")
 		          //.withArgument(Arg.PLATFORM_VERSION,"6.0")
 		          //.withArgument(Arg.AUTOMATION_NAME, "Appium")
-		           .withArgument(Arg.FULL_RESET, "true")
-		          .build();
+		           //.withArgument(Arg.FULL_RESET, "false"));
+		      //    .build();
 		
 //		service=AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
 //        .usingDriverExecutable(new File(nodeJS))
@@ -103,8 +115,10 @@ public class DriverManager {
 			try{
 				deviceID=device;
 			MyLogger.log.info("Trying to create a new Driver for device: "+device);
-			//createService().start();
-			startAppiumServer();
+			stopAppium();
+			createService().start();
+			//startAppiumServer();
+			//appiumShell();
 			Android.driver = new AndroidDriver(host(device),getCaps(device));
 			Android.adb = new ADB(device);
 			break;
@@ -115,13 +129,14 @@ public class DriverManager {
 		}
 	}
 
-	public static void killDriver(){
+	public static void killDriver() throws IOException{
 		if(Android.driver != null){
 			MyLogger.log.info("Killing Android driver");
 			Android.driver.quit();
 			Android.adb.uninstallApp(unlockPackage);
 			//service.stop();
-			stopAppiumServer();
+			stopAppium();
+			//stopAppiumServer();
 			}else MyLogger.log.info("Android driver is not initialised, nothing to kill");
 	}
 	
@@ -172,6 +187,17 @@ public class DriverManager {
 			e.printStackTrace();
 		}
 	}
+    
+    private static void stopAppium() throws IOException{
+    	System.out.println("Trying to stop Appium Server");
+    	try {
+			createService().stop();
+		} catch (Exception e) {
+			System.out.println("No AppiumServer is running...Good to go");
+			e.printStackTrace();
+		}
+    	System.out.println("Appium server is now shutdown...!!!");
+    }
 	
 	
 }
