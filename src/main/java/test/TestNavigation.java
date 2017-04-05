@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.testng.annotations.AfterClass;
@@ -69,7 +70,7 @@ public class TestNavigation extends TestManager{
 		}
 	
 	@Test(priority=3)
-	public void after() throws InterruptedException{
+	public void after() throws InterruptedException, IOException{
 		testInfo.suite("Logout");
 		MyCourseMenu courseMenu = Android.app.simplilearn.courseMenu;
 		MyAccount myAccount = new MyAccount();
