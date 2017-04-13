@@ -7,7 +7,7 @@
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
        <listener class-name="page.factory.helper.CustomFailureListener"></listener>
         <listener class-name="page.factory.helper.ExtentReporterNG"></listener>
-          <listener class-name="com.test.reports.TestNGCustomReportListener" />
+          <listener class-name="com.test.reports.EmailableReporter2" />
   </listeners>
   <test name="Simplilearn">
     <classes>
