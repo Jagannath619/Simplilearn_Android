@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="test">
+<suite name="Suite">
     
-    <listeners>
-     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-       <!--  <listener class-name="page.factory.helper.CustomFailureListener"></listener> -->
-       <!--   <listener class-name="page.factory.helper.ExtentReporterNG"></listener> -->
-         </listeners>
-  <test name="Simplilearn1">
+    <test name="Simplilearn">
     <classes>
       <class name="test.TestNavigation"/>
     </classes>
