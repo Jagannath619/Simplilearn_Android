@@ -40,12 +40,12 @@ public class TestNavigation extends TestManager{
 		}
 	
 	@Test
-	public void test1(){
+	public void verifyLoginElements(){
 		testInfo.id("test1").name("Verify that home activity has all elements");
 		//Assert.assertTrue(simplilearn.home.homeScreenUiObjects.startLogin().exist());
 		}
 	@Test(priority=1)
-	public void test2() throws InterruptedException{
+	public void loginToApp() throws InterruptedException{
 		//testInfo.id("test2").name("Entering credentials for login");
 		Home home = Android.app.simplilearn.home;
 		
@@ -55,7 +55,7 @@ public class TestNavigation extends TestManager{
 		home.tapLogin();
 		}
 	@Test(priority=2)
-	public void test3() throws InterruptedException{
+	public void verifyMyCourse() throws InterruptedException{
 		testInfo.id("test3").name("Testing MyCourse menu");
 		MyCourseMenu courseMenu = Android.app.simplilearn.courseMenu;
 		//Assert.assertTrue(simplilearn.courseMenu.myCourseMenuUiObjects.menuIcon().exist());
@@ -70,7 +70,7 @@ public class TestNavigation extends TestManager{
 		}
 	
 	@Test(priority=3)
-	public void after() throws InterruptedException, IOException{
+	public void verifyLogout() throws InterruptedException, IOException{
 		testInfo.suite("Logout");
 		MyCourseMenu courseMenu = Android.app.simplilearn.courseMenu;
 		MyAccount myAccount = new MyAccount();
