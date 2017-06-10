@@ -5,11 +5,13 @@
     <classes>
       <class name="test.TestNavigation">
         <methods>
-          <include name="before"/>
-          <include name="test3"/>
-          <include name="test2"/>
+          <include name="afterMethod"/>
+          <include name="loginToApp"/>
+          <include name="beforeMethod"/>
           <include name="beforeClass"/>
-          <include name="test1"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="verifyLogout"/>
         </methods>
       </class> <!-- test.TestNavigation -->
     </classes>

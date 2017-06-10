@@ -2,6 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     
+    <listeners>
+		<listener class-name="com.test.reportFoundtion.MyConfigListener" />
+		<listener class-name="com.test.reportFoundtion.InvokedMethodListener" />
+		<listener class-name="com.test.reportFoundtion.ExecutionListener1" />
+		<listener class-name="com.test.reportFoundtion.ExecutionListener2" />
+	</listeners>
+    
     <test name="Simplilearn">
     <classes>
       <class name="test.TestNavigation"/>

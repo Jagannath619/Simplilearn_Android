@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+  <listeners>
+    <listener class-name="com.test.reportFoundtion.MyConfigListener"/>
+    <listener class-name="com.test.reportFoundtion.InvokedMethodListener"/>
+    <listener class-name="com.test.reportFoundtion.ExecutionListener1"/>
+    <listener class-name="com.test.reportFoundtion.ExecutionListener2"/>
+  </listeners>
+  <test name="Simplilearn(failed)">
     <classes>
       <class name="test.TestNavigation">
         <methods>
           <include name="before"/>
-          <include name="test3"/>
-          <include name="test2"/>
+          <include name="verifyLoginElements"/>
+          <include name="verifyMyCourse"/>
+          <include name="loginToApp"/>
           <include name="beforeClass"/>
-          <include name="test1"/>
+          <include name="verifyLogout"/>
         </methods>
       </class> <!-- test.TestNavigation -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Simplilearn(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -45,7 +45,9 @@ public class MyCourseMenuUiObjects {
 				
 		} 
 	public UiObject menuIcon(){
-		if(menuIcon == null) menuIcon = new UiSelector().className("android.widget.ImageButton").makeUiObject();
+		if(menuIcon == null) 
+			//menuIcon = new UiSelector().className("android.widget.ImageButton").makeUiObject();
+		menuIcon = new UiSelector().xPath("//android.widget.ImageButton[@index=0]").makeUiObject();
 	   return menuIcon;
 				
 		} 
