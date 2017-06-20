@@ -83,7 +83,7 @@ public class TestNavigation extends TestManager{
 	
 	
 	@Test(priority = 1)
-	@TestCaseInfo(TestId = "KM-002", Owner = Owners.TestsOwner, Priority = 0, TestCategory = TestCategory.smokeTest)
+	@TestCaseInfo(TestId = "KM-002", Owner = Owners.TestsOwner, Priority = 1, TestCategory = TestCategory.smokeTest)
 	public void loginToApp() throws InterruptedException {
 
 		try {
@@ -106,7 +106,7 @@ public class TestNavigation extends TestManager{
 	
 	
 	@Test(priority=2)
-	@TestCaseInfo(TestId = "KM-003", Owner = Owners.TestsOwner, Priority = 0, TestCategory = TestCategory.smokeTest)
+	@TestCaseInfo(TestId = "KM-003", Owner = Owners.TestsOwner, Priority = 2, TestCategory = TestCategory.smokeTest)
 	public void verifyMyCourse() throws InterruptedException{
 		try{
 		testInfo.id("test3").name("Testing MyCourse menu");
@@ -122,7 +122,7 @@ public class TestNavigation extends TestManager{
 		}
 	
 	@Test(priority=3)
-	@TestCaseInfo(TestId = "KM-004", Owner = Owners.TestsOwner, Priority = 0, TestCategory = TestCategory.smokeTest)
+	@TestCaseInfo(TestId = "KM-004", Owner = Owners.TestsOwner, Priority = 3, TestCategory = TestCategory.smokeTest)
 	public void verifyLogout() throws InterruptedException, IOException{
 		
 		try{
