@@ -1,7 +1,11 @@
 package com.test.reportFoundtion;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.internet.*;
+
 import java.util.*;
 
 public class YouMail {

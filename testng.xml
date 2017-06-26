@@ -9,7 +9,7 @@
 		<listener class-name="com.test.reportFoundtion.ExecutionListener2" />
 	</listeners>
     
-    <test name="Simplilearn">
+    <test name="Simplilearn Android Automation">
     <classes>
       <class name="test.TestNavigation"/>
     </classes>

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.test.reportFoundtion.MyConfigListener"/>
+    <listener class-name="com.test.reportFoundtion.InvokedMethodListener"/>
+    <listener class-name="com.test.reportFoundtion.ExecutionListener1"/>
+    <listener class-name="com.test.reportFoundtion.ExecutionListener2"/>
+  </listeners>
+  <test name="Simplilearn Android Automation(failed)">
     <classes>
       <class name="test.TestNavigation">
         <methods>
           <include name="afterMethod"/>
+          <include name="verifyLoginElements"/>
+          <include name="verifyMyCourse"/>
           <include name="loginToApp"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
@@ -15,5 +23,5 @@
         </methods>
       </class> <!-- test.TestNavigation -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Simplilearn Android Automation(failed) -->
+</suite> <!-- Failed suite [Suite] -->

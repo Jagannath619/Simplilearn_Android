@@ -7,18 +7,21 @@
     <listener class-name="com.test.reportFoundtion.ExecutionListener1"/>
     <listener class-name="com.test.reportFoundtion.ExecutionListener2"/>
   </listeners>
-  <test name="Simplilearn(failed)">
+  <test name="Simplilearn Android Automation(failed)">
     <classes>
       <class name="test.TestNavigation">
         <methods>
-          <include name="before"/>
+          <include name="afterMethod"/>
           <include name="verifyLoginElements"/>
           <include name="verifyMyCourse"/>
           <include name="loginToApp"/>
+          <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
           <include name="verifyLogout"/>
         </methods>
       </class> <!-- test.TestNavigation -->
     </classes>
-  </test> <!-- Simplilearn(failed) -->
+  </test> <!-- Simplilearn Android Automation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

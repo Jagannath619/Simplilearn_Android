@@ -13,8 +13,8 @@ public class ExecutionListener2 implements IExecutionListener {
 
 	
 	public void onExecutionFinish() {
-		RunYouMail mail = new RunYouMail();
-		mail.sendMail();
+		//RunYouMail mail = new RunYouMail();
+		RunYouMail.sendMail();
 		System.out.println("Suite execution completed and Mail has sent successfully ");
 		System.out.println("==========================================");	
 	
