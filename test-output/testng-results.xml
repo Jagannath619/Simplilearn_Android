@@ -2,130 +2,130 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="75870" started-at="2017-06-26T12:59:37Z" finished-at="2017-06-26T13:00:53Z">
+  <suite name="Suite" duration-ms="79129" started-at="2017-07-12T06:49:25Z" finished-at="2017-07-12T06:50:44Z">
     <groups>
       <group name="">
-        <method signature="TestNavigation.verifyLoginElements()[pri:0, instance:test.TestNavigation@72d818d1]" name="verifyLoginElements" class="test.TestNavigation"/>
+        <method signature="TestNavigation.SLUB_001_verifyLoginElements()[pri:0, instance:test.TestNavigation@5702b3b1]" name="SLUB_001_verifyLoginElements" class="test.TestNavigation"/>
       </group> <!--  -->
     </groups>
-    <test name="Simplilearn Android Automation" duration-ms="75870" started-at="2017-06-26T12:59:37Z" finished-at="2017-06-26T13:00:53Z">
+    <test name="Simplilearn Android Automation" duration-ms="79129" started-at="2017-07-12T06:49:25Z" finished-at="2017-07-12T06:50:44Z">
       <class name="test.TestNavigation">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeTest" is-config="true" duration-ms="408" started-at="2017-06-26T18:29:37Z" finished-at="2017-06-26T18:29:38Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeTest" is-config="true" duration-ms="323" started-at="2017-07-12T12:19:25Z" finished-at="2017-07-12T12:19:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeClass" is-config="true" duration-ms="29241" started-at="2017-06-26T18:29:38Z" finished-at="2017-06-26T18:30:07Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeClass" is-config="true" duration-ms="29009" started-at="2017-07-12T12:19:25Z" finished-at="2017-07-12T12:19:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-06-26T18:30:07Z" finished-at="2017-06-26T18:30:07Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:19:54Z" finished-at="2017-07-12T12:19:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.TestNavigation.verifyLoginElements()]]>
+                <![CDATA[public void test.TestNavigation.SLUB_001_verifyLoginElements()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyLoginElements()[pri:0, instance:test.TestNavigation@72d818d1]" name="verifyLoginElements" duration-ms="10" started-at="2017-06-26T18:30:07Z" finished-at="2017-06-26T18:30:07Z">
+        <test-method status="PASS" signature="SLUB_001_verifyLoginElements()[pri:0, instance:test.TestNavigation@5702b3b1]" name="SLUB_001_verifyLoginElements" duration-ms="8" started-at="2017-07-12T12:19:54Z" finished-at="2017-07-12T12:19:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginElements -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@72d818d1]" name="afterMethod" is-config="true" duration-ms="2" started-at="2017-06-26T18:30:07Z" finished-at="2017-06-26T18:30:07Z">
+        </test-method> <!-- SLUB_001_verifyLoginElements -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@5702b3b1]" name="afterMethod" is-config="true" duration-ms="5" started-at="2017-07-12T12:19:54Z" finished-at="2017-07-12T12:19:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginElements status=SUCCESS method=TestNavigation.verifyLoginElements()[pri:0, instance:test.TestNavigation@72d818d1] output={null}]]]>
+                <![CDATA[[TestResult name=SLUB_001_verifyLoginElements status=SUCCESS method=TestNavigation.SLUB_001_verifyLoginElements()[pri:0, instance:test.TestNavigation@5702b3b1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:07Z" finished-at="2017-06-26T18:30:07Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:19:54Z" finished-at="2017-07-12T12:19:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.TestNavigation.loginToApp() throws java.lang.InterruptedException]]>
+                <![CDATA[public void test.TestNavigation.SLUB_002_loginToApp() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginToApp()[pri:1, instance:test.TestNavigation@72d818d1]" name="loginToApp" duration-ms="22806" started-at="2017-06-26T18:30:07Z" finished-at="2017-06-26T18:30:30Z">
+        <test-method status="PASS" signature="SLUB_002_loginToApp()[pri:1, instance:test.TestNavigation@5702b3b1]" name="SLUB_002_loginToApp" duration-ms="22509" started-at="2017-07-12T12:19:54Z" finished-at="2017-07-12T12:20:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToApp -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@72d818d1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:30Z" finished-at="2017-06-26T18:30:30Z">
+        </test-method> <!-- SLUB_002_loginToApp -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@5702b3b1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:20:16Z" finished-at="2017-07-12T12:20:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginToApp status=SUCCESS method=TestNavigation.loginToApp()[pri:1, instance:test.TestNavigation@72d818d1] output={null}]]]>
+                <![CDATA[[TestResult name=SLUB_002_loginToApp status=SUCCESS method=TestNavigation.SLUB_002_loginToApp()[pri:1, instance:test.TestNavigation@5702b3b1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:30Z" finished-at="2017-06-26T18:30:30Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:20:16Z" finished-at="2017-07-12T12:20:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.TestNavigation.verifyMyCourse() throws java.lang.InterruptedException]]>
+                <![CDATA[public void test.TestNavigation.SLUB_003_verifyMyCourse() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyMyCourse()[pri:2, instance:test.TestNavigation@72d818d1]" name="verifyMyCourse" duration-ms="5005" started-at="2017-06-26T18:30:30Z" finished-at="2017-06-26T18:30:35Z">
+        <test-method status="PASS" signature="SLUB_003_verifyMyCourse()[pri:2, instance:test.TestNavigation@5702b3b1]" name="SLUB_003_verifyMyCourse" duration-ms="5007" started-at="2017-07-12T12:20:16Z" finished-at="2017-07-12T12:20:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyMyCourse -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@72d818d1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:35Z" finished-at="2017-06-26T18:30:35Z">
+        </test-method> <!-- SLUB_003_verifyMyCourse -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@5702b3b1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:20:21Z" finished-at="2017-07-12T12:20:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyMyCourse status=SUCCESS method=TestNavigation.verifyMyCourse()[pri:2, instance:test.TestNavigation@72d818d1] output={null}]]]>
+                <![CDATA[[TestResult name=SLUB_003_verifyMyCourse status=SUCCESS method=TestNavigation.SLUB_003_verifyMyCourse()[pri:2, instance:test.TestNavigation@5702b3b1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@72d818d1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:35Z" finished-at="2017-06-26T18:30:35Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:test.TestNavigation@5702b3b1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:20:21Z" finished-at="2017-07-12T12:20:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.TestNavigation.verifyLogout() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void test.TestNavigation.SLUB_004_verifyLogout() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyLogout()[pri:3, instance:test.TestNavigation@72d818d1]" name="verifyLogout" duration-ms="17935" started-at="2017-06-26T18:30:35Z" finished-at="2017-06-26T18:30:53Z">
+        <test-method status="PASS" signature="SLUB_004_verifyLogout()[pri:3, instance:test.TestNavigation@5702b3b1]" name="SLUB_004_verifyLogout" duration-ms="21501" started-at="2017-07-12T12:20:21Z" finished-at="2017-07-12T12:20:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogout -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@72d818d1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-26T18:30:53Z" finished-at="2017-06-26T18:30:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLogout status=SUCCESS method=TestNavigation.verifyLogout()[pri:3, instance:test.TestNavigation@72d818d1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.TestNavigation@72d818d1]" name="afterTest" is-config="true" duration-ms="428" started-at="2017-06-26T18:30:53Z" finished-at="2017-06-26T18:30:53Z">
+        </test-method> <!-- SLUB_004_verifyLogout -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.TestNavigation@5702b3b1]" name="afterTest" is-config="true" duration-ms="738" started-at="2017-07-12T12:20:43Z" finished-at="2017-07-12T12:20:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.TestNavigation@5702b3b1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-12T12:20:43Z" finished-at="2017-07-12T12:20:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SLUB_004_verifyLogout status=SUCCESS method=TestNavigation.SLUB_004_verifyLogout()[pri:3, instance:test.TestNavigation@5702b3b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- test.TestNavigation -->
     </test> <!-- Simplilearn Android Automation -->
   </suite> <!-- Suite -->

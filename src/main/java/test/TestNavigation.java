@@ -21,6 +21,7 @@ import com.foundation.coreManager.DriverManager;
 import com.foundation.coreManager.TestManager;
 import com.relevantcodes.extentreports.LogStatus;
 import com.test.reportFoundtion.Owners;
+import com.test.reportFoundtion.PrintHtml;
 import com.test.reportFoundtion.TestCaseInfo;
 import com.test.reportFoundtion.TestCategory;
 import com.test.reportFoundtion.TestClass;
@@ -39,6 +40,7 @@ import com.test.reportFoundtion.TestRunner;
 
 public class TestNavigation extends TestManager{
 	//static TestRunner runner = new TestRunner();
+	
 	
 	private static Simplilearn simplilearn = Android.app.simplilearn;
 	TestExtentManager extentManager = new TestExtentManager();
@@ -68,8 +70,8 @@ public class TestNavigation extends TestManager{
 	
 	
 	@Test(groups = { "" })
-	@TestCaseInfo(TestId = "KM-001", Owner = Owners.TestsOwner, Priority = 0, TestCategory = TestCategory.smokeTest)
-	public void verifyLoginElements(){
+	@TestCaseInfo(TestId = "SLUB-001", Owner = Owners.TestsOwner, Priority = 0, TestCategory = TestCategory.smokeTest)
+	public void SLUB_001_verifyLoginElements(){
 		try{
 			testInfo.id("test1").name("Verify that home activity has all elements");
 		extentManager.startExtentTest("Login elements verification");
@@ -83,8 +85,8 @@ public class TestNavigation extends TestManager{
 	
 	
 	@Test(priority = 1)
-	@TestCaseInfo(TestId = "KM-002", Owner = Owners.TestsOwner, Priority = 1, TestCategory = TestCategory.smokeTest)
-	public void loginToApp() throws InterruptedException {
+	@TestCaseInfo(TestId = "SLUB-002", Owner = Owners.TestsOwner, Priority = 1, TestCategory = TestCategory.smokeTest)
+	public void SLUB_002_loginToApp() throws InterruptedException {
 
 		try {
 			// testInfo.id("test2").name("Entering credentials for login");
@@ -106,8 +108,8 @@ public class TestNavigation extends TestManager{
 	
 	
 	@Test(priority=2)
-	@TestCaseInfo(TestId = "KM-003", Owner = Owners.TestsOwner, Priority = 2, TestCategory = TestCategory.smokeTest)
-	public void verifyMyCourse() throws InterruptedException{
+	@TestCaseInfo(TestId = "SLUB-003", Owner = Owners.TestsOwner, Priority = 2, TestCategory = TestCategory.smokeTest)
+	public void SLUB_003_verifyMyCourse() throws InterruptedException{
 		try{
 		testInfo.id("test3").name("Testing MyCourse menu");
 		extentManager.startExtentTest("Testing MyCourse menu");
@@ -122,8 +124,8 @@ public class TestNavigation extends TestManager{
 		}
 	
 	@Test(priority=3)
-	@TestCaseInfo(TestId = "KM-004", Owner = Owners.TestsOwner, Priority = 3, TestCategory = TestCategory.smokeTest)
-	public void verifyLogout() throws InterruptedException, IOException{
+	@TestCaseInfo(TestId = "SLUB-004", Owner = Owners.TestsOwner, Priority = 3, TestCategory = TestCategory.smokeTest)
+	public void SLUB_004_verifyLogout() throws InterruptedException, IOException{
 		
 		try{
 			extentManager.startExtentTest("Testing Logout");
@@ -149,10 +151,22 @@ public class TestNavigation extends TestManager{
 	public void afterMethod(ITestResult result) throws IOException{
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
+			PrintHtml.failed+=1;
 			extentManager.setExtentScreenShot("screenshotForextentReport");
 			TestExtentManager.test.log(LogStatus.FAIL, result.getThrowable());
 			
 		}
+		   else if(result.getStatus() == ITestResult.SUCCESS)
+	        {
+
+			   PrintHtml.passed+=1;
+	        }
+	        
+	        else if(result.getStatus() == ITestResult.SKIP)
+	        {
+	        	PrintHtml.skipped+=1;
+	        }
+	   
 		TestExtentManager.extent.endTest(TestExtentManager.test);
 	}
 

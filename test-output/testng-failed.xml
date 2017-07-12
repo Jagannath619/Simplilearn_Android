@@ -12,14 +12,13 @@
       <class name="test.TestNavigation">
         <methods>
           <include name="afterMethod"/>
-          <include name="verifyLoginElements"/>
-          <include name="verifyMyCourse"/>
-          <include name="loginToApp"/>
+          <include name="SLUB_003_verifyMyCourse"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="verifyLogout"/>
+          <include name="SLUB_002_loginToApp"/>
+          <include name="SLUB_004_verifyLogout"/>
         </methods>
       </class> <!-- test.TestNavigation -->
     </classes>

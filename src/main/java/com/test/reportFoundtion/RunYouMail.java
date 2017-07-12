@@ -12,6 +12,7 @@ public class RunYouMail {
 			//a1.SendEmail("nilabh.p@simplilearn.net", "Simplilearn Automation", "Android Automation");
 			//a1.SendEmail("preetham.b@simplilearn.net", "Simplilearn Automation", "Android Automation");
 			a1.SendEmail("jagannath.panda@simplilearn.net", "Simplilearn Automation", "Android Automation");
+			a1.SendEmail("ashish.patel@simplilearn.net", "Simplilearn Automation", "Android Automation");
 			
 			
 		}
